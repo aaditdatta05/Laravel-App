@@ -47,6 +47,17 @@
             @endif
         </div>
 
+        <div class="mt-4">
+            <x-input-label for="role" :value="__('Role')" />
+            <input
+                id="role"
+                type="text"
+                class="block mt-1 w-full border-gray-300 rounded-md shadow-sm bg-gray-100"
+                value="{{ auth()->user()->role?->name }}"
+                disabled
+            >
+        </div>
+
         <div class="flex items-center gap-4">
             <x-primary-button>{{ __('Save') }}</x-primary-button>
 
